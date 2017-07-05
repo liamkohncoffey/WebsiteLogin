@@ -1,0 +1,107 @@
+<html>
+	<head>
+		<title>
+			Stock Price Tracker
+		</title>
+		<script type="text/javascript" src="JavaScript.js"></script>
+		<link rel="stylesheet" type="text/css" href="Style.css">
+	</head>
+	<body>
+		<h1 id="Heading">Stock Price Tracker</h1>
+		<div id="Window">
+			
+				<h1>Login</h1>
+				Username:<input type="text" id="username" /><br/>
+				Password:<input type="password" id="password" /><br />
+				<input type="button" id="Login"  onclick="NamePass()" value="Login" />
+				<input type="button"  id="Clear" onclick="Clear()" value="Clear" />
+				<div id="Debug">
+			
+				</div>
+		</div><p>
+		
+		</p>
+		<div id="StockCheck" style="display:none">
+		<h1>Stocks</h1>
+
+  		<input type="checkbox" id="AcmePublishing" value="Acme Publishing">Acme Publishing<br>
+  		<input type="checkbox" id="NeutralNetworks" value="Neutral Networks">Neutral Networks<br>
+  		<input type="checkbox" id="XYZLogistics" value="XYZ Logistics">XYZ Logistics<br>
+  		<input type="checkbox" id="FlingFing" value="Fling Fing">Fling Fing<br>
+  		<input type="checkbox" id="TotalSolutionsInc" value="Total Solutions Inc">Total Solutions Inc<br>
+  		<input type="checkbox" id="ABCCompany" value="ABC Company">ABC Company<br>
+  		<input type="button" value="Submit" onclick="JavaScript:addStocks()">
+				</div>
+				
+				<div id="ProductInformation"  style="display:none">
+					<h1>Stocks</h1>
+					<ul>
+							<div id="One"><li>
+								<span class="button" id="1" onclick="JavaScript:update(this, AcmePublishing, 'Acme','AcmeValue')">[+]</span>
+								<span class="Title">Acme Publishing</span>							
+								<ul><div id="Acme" class="details"></div></ul>
+								<div  id="AcmeNotes" style="display:none" >
+									Notes:<input type="text" id="AcmeValue"/><br/>
+									<input type="button" value="Submit" onclick="NotesPass('AcmeValue','Acme',AcmePublishing)" />
+									</div>			
+							</li>
+							</div>
+							<div id="Two"><li>									
+								<span class="button" id="2" onclick="JavaScript:update(this, NeutralNetworks , 'Neutral','NeutralValue')">[+]</span>
+								<span class="Title">Neutral Networks</span>
+								<ul><div id="Neutral" class="details"></div></ul>
+								<div style="display:none" id="NeutralNotes">
+									Notes:<input type="text" id="NeutralValue"/><br/>
+									<input type="button" value="Submit" onclick="NotesPass('NeutralValue','Neutral',NeutralNetworks)" />
+									</div>	
+							</li>
+							</div>
+							<div id="Three"><li>	
+								<span class="button" id="3" onclick="JavaScript:update(this, XYZLogistics ,'XYZ','XYZValue')">[+]</span>
+								<span class="Title">XYZ Logistics</span>
+								<ul><div id="XYZ" class="details"></div></ul>
+								<div style="display:none" id="XYZNotes">
+									Notes:<input type="text" id="XYZValue"/><br/>
+									<input type="button" value="Submit" onclick="NotesPass('XYZValue','XYZ',XYZLogistics)" />
+									</div>	
+							</li>
+							</div>
+							<div id="Four"><li>
+								<span class="button" id="4" onclick="JavaScript:update(this, FlingFing ,'Fling','FlingValue')">[+]</span>
+								<span class="Title">Fling Fing</span>
+								<ul><div id="Fling" class="details"></div></ul>
+								<div style="display:none" id="FlingNotes">
+									Notes:<input type="text" id="FlingValue"/><br/>
+									<input type="button" value="Submit" onclick="NotesPass('FlingValue','Fling',FlingFing)" />
+									</div>	
+								</li>
+								</div>
+							<div id="Five"><li>	
+								<span class="button" id="5" onclick="JavaScript:update(this, TotalSolutionsInc ,'Total','TotalValue')">[+]</span>
+								<span class="Title">Total Solutions Inc</span>
+								<ul><div id="Total" class="details"></div></ul>
+								<div style="display:none" id="TotalNotes">
+									Notes:<input type="text" id="TotalValue"/><br/>
+									<input type="button" value="Submit" onclick="NotesPass('TotalValue','Total',TotalSolutionsInc)" />
+									</div>	
+							</li>
+							</div>
+							<div id="Six"><li>
+								<span class="button" id="6" onclick="JavaScript:update(this, ABCCompany ,'ABC','ABCValue')">[+]</span>
+								<span class="Title">ABC Company</span>
+								<ul><div id="ABC" class="details"></div></ul>
+								<div style="display:none" id="ABCNotes">
+									Notes:<input type="text" id="ABCValue"/><br/>
+									<input type="button" value="Submit" onclick="NotesPass('ABCValue','ABC',ABCCompany)" />
+									</div>
+							</li>
+						
+							</div>
+							
+								<input type="button" id="ChangeStock" value="Change Stocks" onclick="ChangeStock()" />
+								<input type="button" id="Logout" value="Logout" onclick="Logout()" />
+						</ul>
+					
+				</div>
+	</body>
+</html>
